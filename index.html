@@ -27,13 +27,72 @@
                 HTML.</p>
         </section>
         <section class="main-section" id="what_is_html">
-            <header>What is HTML</header>
+            <header>What is HTML?</header>
             <p>HTML (HyperText Markup Language) is a markup language that tells web browsers how to structure the web
                 pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML
                 consists of a series of elements, which you use to enclose, wrap, or mark up different parts of content
                 to make it appear or act in a certain way. The enclosing tags can make content into a hyperlink to
                 connect to another page, italicize words, and so on. For example, consider the following line of text:
             </p>
+            <code class="code">My cat is very grumpy</code>
+            <p>If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in
+                paragraph tags:</p>
+            <code class="code">&lt;p&gt;My cat is very grumpy&lt;p&gt;</code>
+            <h3>Anatomy of an HTML element</h3>
+            <p>Let's explore this paragraph element a bit further.</p>
+            <img
+                src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/grumpy-cat-small.png" />
+            <p>The main parts of our element are as follows:</p>
+            <ul class="list-style">
+                <li><b>The opening tag:</b> This consists of the name of the element (in this case, <code>p</code>),
+                    wrapped in opening and
+                    closing <b>angle brackets</b>. This states where the element begins or starts to take effect — in
+                    this case
+                    where the paragraph begins.</li>
+                <li><b>The closing tag:</b> This is the same as the opening tag, except that it includes a <i>forward
+                        slash</i> before
+                    the element name. This states where the element ends — in this case where the paragraph ends.
+                    Failing to add a closing tag is one of the standard beginner errors and can lead to strange results.
+                </li>
+                <li><b>The content:</b> This is the content of the element, which in this case, is just text.</li>
+                <li><b>The element:</b> The opening tag, the closing tag, and the content together comprise the element.
+                </li>
+            </ul>
+            <p>Elements can also have attributes that look like the following:</p>
+            <img
+                src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/grumpy-cat-attribute-small.png" />
+            <p>Attributes contain extra information about the element that you don't want to appear in the actual
+                content. Here, <code>class</code> is the attribute name and <code>editor-note</code> is the attribute
+                value. The <code>class</code> attribute
+                allows you to give the element a non-unique identifier that can be used to target it (and any other
+                elements with the same <code>class</code> value) with style information and other things.</p>
+            <p>An attribute should always have the following:</p>
+            <ul class="list-style">
+                <li>A space between it and the element name (or the previous attribute, if the element already has one
+                    or more attributes).</li>
+                <li>The attribute name followed by an equal sign.</li>
+                <li>The attribute value wrapped by opening and closing quotation marks.</li>
+            </ul>
+            <h3>Nesting Elements</h3>
+            <p>You can put elements inside other elements too — this is called <b>nesting</b>. If we wanted to state
+                that our
+                cat is <b>very</b> grumpy, we could wrap the word "very" in a <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"><code>&lt;strong&gt;</code></a>
+                element, which means that the word is to
+                be strongly emphasized:</p>
+            <code class="code">&lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;</code>
+            <p>You do however need to make sure that your elements are properly nested. In the example above, we opened
+                the <a><code>&lt;p&gt;</code></a> element first, then the <a><code>&lt;strong&gt;</code></a> element;
+                therefore, we have to close the
+                <code>&lt;strong&gt;</code> element first, then the <code>&lt;p&gt;</code> element. The following is
+                incorrect:
+            </p>
+            <code class="wrong-code">&lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;</code>
+            <p>The elements have to open and close correctly so that they are clearly inside or outside one another. If
+                they overlap as shown above, then your web browser will try to make the best guess at what you were
+                trying to say, which can lead to unexpected results. So don't do it!</p>
+            <h3>Void Elements</h3>
+            <p>Some elements have no content and are called <a href="https://developer.mozilla.org/en-US/docs/Glossary/Void_element">void elements</a>. Take the <code>&lt;img&gt;</code>> element that we already have in our HTML page:</p>
         </section>
         <section class="main-section" id="">
             <header></header>
