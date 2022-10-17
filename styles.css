@@ -2,15 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 html {
-    font-size:18px;
+    font-size:16px;
     color:#001b13;
     font-family: 'Montserrat',Arial, Helvetica, sans-serif;
 }
 
 body {
-    margin: 1em;
-    max-width: 90%;
+    margin: 3rem;
     display: block;
+}
+
+header {
+    font-size: 2rem;
+    font-weight:bold;
+    padding-top:3rem;
 }
 
 ul.list-style-circle {
@@ -21,17 +26,21 @@ ul.list-style-number {
     list-style-type: number;
 }
 
+.code, .wrong-code {
+    display:block;
+    padding:0.5rem;
+    border-radius: 0.3125rem;
+    white-space: pre-line;
+    padding-left:1rem;
+}
+
 .code {
     border:0.0625rem solid rgb(143, 143, 143);
-    border-radius: 0.3125rem;
     background-color: #e4fff7;
-    white-space: pre-line;
-    display:block;
 }
 
 .wrong-code {
     border:0.0625rem solid rgb(143, 143, 143);
-    border-radius: 0.3125rem;
     background-color: #ffe4ec;
 }
 
@@ -40,13 +49,13 @@ code {
     font-size: 1rem;
     font-family: monospace, monospace;
     border-radius: 0.3125rem;
-    
+    display:inline;
+    padding:0.2rem;
 }
 
 img {
     max-width: 100%;
     border-radius: 5px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
