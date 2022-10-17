@@ -43,7 +43,7 @@
             <img
                 src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/grumpy-cat-small.png" />
             <p>The main parts of our element are as follows:</p>
-            <ul class="list-style">
+            <ul class="list-style-number">
                 <li><b>The opening tag:</b> This consists of the name of the element (in this case, <code>p</code>),
                     wrapped in opening and
                     closing <b>angle brackets</b>. This states where the element begins or starts to take effect — in
@@ -67,7 +67,7 @@
                 allows you to give the element a non-unique identifier that can be used to target it (and any other
                 elements with the same <code>class</code> value) with style information and other things.</p>
             <p>An attribute should always have the following:</p>
-            <ul class="list-style">
+            <ul class="list-style-number">
                 <li>A space between it and the element name (or the previous attribute, if the element already has one
                     or more attributes).</li>
                 <li>The attribute name followed by an equal sign.</li>
@@ -88,13 +88,40 @@
                 incorrect:
             </p>
             <code class="wrong-code">&lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;</code>
-            <p>The <b>tag have to open and close correctly so that they are clearly inside or outside one another</b>. If
+            <p>The <b>tag have to open and close correctly so that they are clearly inside or outside one another</b>.
+                If
                 they overlap as shown above, then your web browser will try to make the best guess at what you were
                 trying to say, which can lead to unexpected results. So don't do it!</p>
+            <header>Block versus inline elements</header>
+            <p>There are two important categories of elements to know in HTML: block-level elements and inline elements.
+            </p>
+            <ul class="list-style-circle">
+                <li>Block-level elements form a visible block on a page. A block-level element appears on a new line
+                    following the content that precedes it. Any content that follows a block-level element also appears
+                    on a new line. Block-level elements are usually structural elements on the page. For example, a
+                    block-level element might represent headings, paragraphs, lists, navigation menus, or footers. A
+                    block-level element wouldn't be nested inside an inline element, but it might be nested inside
+                    another block-level element.</li>
+                <li>Inline elements are contained within block-level elements, and surround only small parts of the
+                    document's content (not entire paragraphs or groupings of content). An inline element will not cause
+                    a new line to appear in the document. It is typically used with text, for example an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a> element
+                        creates a hyperlink, and elements such as <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"><code>&lt;em&gt;</code></a>> or <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"><code>&lt;strong&gt;</code></a> create emphasis.</li>
+            </ul>
+            <p>Consider the following example:</p>
+            <code class="code">&lt;em&gt;first&lt;/em&gt;&lt;em&gt;second&lt;/em&gt;&lt;em&gt;third&lt;/em&gt;
+
+
+
+
+
+                
+            </code>
             <header>Void Elements</header>
+            <p></p>
             <p>Some elements have no content and are called <a
                     href="https://developer.mozilla.org/en-US/docs/Glossary/Void_element">void elements</a>. Take the
-                <code>&lt;img&gt;</code>> element that we already have in our HTML page:</p>
+                <code>&lt;img&gt;</code>> element that we already have in our HTML page:
+            </p>
         </section>
         <section class="main-section" id="">
             <header></header>

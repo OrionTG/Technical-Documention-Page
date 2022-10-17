@@ -13,23 +13,25 @@ body {
     display: block;
 }
 
-ul.list-style {
+ul.list-style-circle {
+    list-style-type: circle;
+}
+
+ul.list-style-number {
     list-style-type: number;
 }
 
 .code {
     border:0.0625rem solid rgb(143, 143, 143);
     border-radius: 0.3125rem;
-    padding:0.3125rem 0.625rem;
-    margin:0.3125rem;
     background-color: #e4fff7;
+    white-space: pre-line;
+    display:block;
 }
 
 .wrong-code {
     border:0.0625rem solid rgb(143, 143, 143);
     border-radius: 0.3125rem;
-    padding:0.3125rem 0.625rem;
-    margin:0.3125rem;
     background-color: #ffe4ec;
 }
 
@@ -38,7 +40,7 @@ code {
     font-size: 1rem;
     font-family: monospace, monospace;
     border-radius: 0.3125rem;
-    padding:0 0.3125rem;
+    
 }
 
 img {
