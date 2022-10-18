@@ -16,6 +16,16 @@ header {
     font-size: 2rem;
     font-weight:bold;
     padding-top:3rem;
+    display: block;
+}
+p {
+    display: block;
+    padding-top:1rem;
+}
+
+ul > li {
+    padding-top:0.3125rem;
+    padding-left:1rem;
 }
 
 ul.list-style-circle {
@@ -35,12 +45,12 @@ ul.list-style-number {
 }
 
 .code {
-    border:0.0625rem solid rgb(143, 143, 143);
-    background-color: #e4fff7;
+    border:0.0625rem solid #f2f1f1;
+    background-color: #f2f1f1;
 }
 
 .wrong-code {
-    border:0.0625rem solid rgb(143, 143, 143);
+    border:0.0625rem solid #ffe4ec;
     background-color: #ffe4ec;
 }
 

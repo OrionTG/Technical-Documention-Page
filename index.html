@@ -89,9 +89,8 @@
             </p>
             <code class="wrong-code">&lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;</code>
             <p>The <b>tag have to open and close correctly so that they are clearly inside or outside one another</b>.
-                If
-                they overlap as shown above, then your web browser will try to make the best guess at what you were
-                trying to say, which can lead to unexpected results. So don't do it!</p>
+                With the kind of overlap in the example above, the browser has to guess at your intent. This kind of
+                guessing can result in unexpected results.</p>
             <header>Block versus inline elements</header>
             <p>There are two important categories of elements to know in HTML: block-level elements and inline elements.
             </p>
@@ -104,11 +103,27 @@
                     another block-level element.</li>
                 <li>Inline elements are contained within block-level elements, and surround only small parts of the
                     document's content (not entire paragraphs or groupings of content). An inline element will not cause
-                    a new line to appear in the document. It is typically used with text, for example an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a> element
-                        creates a hyperlink, and elements such as <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"><code>&lt;em&gt;</code></a>> or <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"><code>&lt;strong&gt;</code></a> create emphasis.</li>
+                    a new line to appear in the document. It is typically used with text, for example an <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a>
+                    element
+                    creates a hyperlink, and elements such as <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"><code>&lt;em&gt;</code></a>>
+                    or <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"><code>&lt;strong&gt;</code></a>
+                    create emphasis.</li>
             </ul>
             <p>Consider the following example:</p>
-            <code class="code">&lt;em&gt;first&lt;/em&gt;&lt;em&gt;second&lt;/em&gt;&lt;em&gt;third&lt;/em&gt;</code>
+            <code class="code">&lt;em&gt;first&lt;/em&gt;&lt;em&gt;second&lt;/em&gt;&lt;em&gt;third&lt;/em&gt;
+
+
+                &lt;p&gt;fourth&lt;/p&gt;
+                &lt;p&gt;fifth&lt;/p&gt;
+                &lt;p&gt;sixth&lt;/p&gt;
+            </code>
+            <p><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em">&lt;em&gt;</a></code>is an inline element. As you see below, the first three elements sit on the same line, with no space in
+                between. On the other hand,
+            <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p">&lt;p&gt;</a></code> is a block-level element. Each <code><em>p</em></code> element appears on a new line, with space above and below. (The spacing
+                is due to default CSS styling that the browser applies to paragraphs.)</p>
             <header>Void Elements</header>
             <p></p>
             <p>Some elements have no content and are called <a
