@@ -42,6 +42,7 @@ ul.list-style-number {
     border-radius: 0.3125rem;
     white-space: pre-line;
     padding-left:1rem;
+
 }
 
 .code {
@@ -63,9 +64,16 @@ code {
     padding:0.2rem;
 }
 
+.material-icons {
+    color:red;
+    display: inline;
+    position: absolute;
+    right:3em;
+}
+
 img {
     max-width: 100%;
     border-radius: 5px;
     display: block;
-    margin: auto;
+    
 }
