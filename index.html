@@ -10,13 +10,6 @@
     <!-- Add Google icon-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <!-- add hightlight.js for hightlight code -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
-
-    <!-- add the initiation script to load hightlight.js -->
-    <script>hljs.initHighlightingOnLoad();</script>
-    
 </head>
 
 <body>
@@ -37,6 +30,7 @@
                 the first two of these and introduce fundamental concepts and syntax you need to know to understand
                 HTML.</p>
         </section>
+
         <section class="main-section" id="what_is_html">
             <header>What is HTML?</header>
             <p>HTML (HyperText Markup Language) is a markup language that tells web browsers how to structure the web
@@ -45,116 +39,189 @@
                 to make it appear or act in a certain way. The enclosing tags can make content into a hyperlink to
                 connect to another page, italicize words, and so on. For example, consider the following line of text:
             </p>
-            <pre><code class="code html">My cat is very grumpy</code></pre>
+            <code class="code">My cat is very grumpy</code>
             <p>If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in
                 paragraph tags:</p>
-            <pre><code class="code html">&lt;p&gt;My cat is very grumpy&lt;p&gt;</code></pre>
-            <header>Anatomy of an HTML element</header>
-            <p>Let's explore this paragraph element a bit further.</p>
-            <img
-                src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/grumpy-cat-small.png" />
-            <p>The main parts of our element are as follows:</p>
-            <ul class="list-style-number">
-                <li><b>The opening tag:</b> This consists of the name of the element (in this case, <code>p</code>),
-                    wrapped in opening and
-                    closing <b>angle brackets</b>. This states where the element begins or starts to take effect — in
-                    this case
-                    where the paragraph begins.</li>
-                <li><b>The closing tag:</b> This is the same as the opening tag, except that it includes a <i>forward
-                        slash</i> before
-                    the element name. This states where the element ends — in this case where the paragraph ends.
-                    Failing to add a closing tag is one of the standard beginner errors and can lead to strange results.
-                </li>
-                <li><b>The content:</b> This is the content of the element, which in this case, is just text.</li>
-                <li><b>The element:</b> The opening tag, the closing tag, and the content together comprise the element.
-                </li>
-            </ul>
-            <p>Elements can also have attributes that look like the following:</p>
-            <img
-                src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/grumpy-cat-attribute-small.png" />
-            <p>Attributes contain extra information about the element that you don't want to appear in the actual
-                content. Here, <code>class</code> is the attribute name and <code>editor-note</code> is the attribute
-                value. The <code>class</code> attribute
-                allows you to give the element a non-unique identifier that can be used to target it (and any other
-                elements with the same <code>class</code> value) with style information and other things.</p>
-            <p>An attribute should always have the following:</p>
-            <ul class="list-style-number">
-                <li>A space between it and the element name (or the previous attribute, if the element already has one
-                    or more attributes).</li>
-                <li>The attribute name followed by an equal sign.</li>
-                <li>The attribute value wrapped by opening and closing quotation marks.</li>
-            </ul>
-            <header>Nesting Elements</header>
-            <p>You can put elements inside other elements too — this is called <b>nesting</b>. If we wanted to state
-                that our
-                cat is <b>very</b> grumpy, we could wrap the word "very" in a <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"><code>&lt;strong&gt;</code></a>
-                element, which means that the word is to
-                be strongly emphasized:</p>
-            <pre><code class="code html">&lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;</code></pre>
-            <p>You do however need to make sure that your elements are properly nested. In the example above, we opened
-                the <a><code>&lt;p&gt;</code></a> element first, then the <a><code>&lt;strong&gt;</code></a> element;
-                therefore, we have to close the
-                <code>&lt;strong&gt;</code> element first, then the <code>&lt;p&gt;</code> element. The following is
-                incorrect:
-            </p>
-            <code class="wrong-code">&lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt; <i class="material-icons">&#xe001;</i></code>
-            <p>The <b>tag have to open and close correctly so that they are clearly inside or outside one another</b>.
-                With the kind of overlap in the example above, the browser has to guess at your intent. This kind of
-                guessing can result in unexpected results.</p>
-            <header>Block versus inline elements</header>
-            <p>There are two important categories of elements to know in HTML: block-level elements and inline elements.
-            </p>
-            <ul class="list-style-circle">
-                <li>Block-level elements form a visible block on a page. A block-level element appears on a new line
-                    following the content that precedes it. Any content that follows a block-level element also appears
-                    on a new line. Block-level elements are usually structural elements on the page. For example, a
-                    block-level element might represent headings, paragraphs, lists, navigation menus, or footers. A
-                    block-level element wouldn't be nested inside an inline element, but it might be nested inside
-                    another block-level element.</li>
-                <li>Inline elements are contained within block-level elements, and surround only small parts of the
-                    document's content (not entire paragraphs or groupings of content). An inline element will not cause
-                    a new line to appear in the document. It is typically used with text, for example an <a
-                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a>
-                    element
-                    creates a hyperlink, and elements such as <a
-                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"><code>&lt;em&gt;</code></a>>
-                    or <a
+            <code class="code">&lt;p&gt;My cat is very grumpy&lt;p&gt;</code>
+
+            <section class="main-section" id="anatomy_of_an_html_element">
+                <header>Anatomy of an HTML element</header>
+                <p>Let's explore this paragraph element a bit further.</p>
+                <img
+                    src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/grumpy-cat-small.png" />
+                <p>The main parts of our element are as follows:</p>
+                <ul class="list-style-number">
+                    <li><b>The opening tag:</b> This consists of the name of the element (in this case, <code>p</code>),
+                        wrapped in opening and
+                        closing <b>angle brackets</b>. This states where the element begins or starts to take effect —
+                        in
+                        this case
+                        where the paragraph begins.</li>
+                    <li><b>The closing tag:</b> This is the same as the opening tag, except that it includes a
+                        <i>forward
+                            slash</i> before
+                        the element name. This states where the element ends — in this case where the paragraph ends.
+                        Failing to add a closing tag is one of the standard beginner errors and can lead to strange
+                        results.
+                    </li>
+                    <li><b>The content:</b> This is the content of the element, which in this case, is just text.</li>
+                    <li><b>The element:</b> The opening tag, the closing tag, and the content together comprise the
+                        element.
+                    </li>
+                </ul>
+                <p>Elements can also have attributes that look like the following:</p>
+                <img
+                    src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/grumpy-cat-attribute-small.png" />
+                <p>Attributes contain extra information about the element that you don't want to appear in the actual
+                    content. Here, <code>class</code> is the attribute name and <code>editor-note</code> is the
+                    attribute
+                    value. The <code>class</code> attribute
+                    allows you to give the element a non-unique identifier that can be used to target it (and any other
+                    elements with the same <code>class</code> value) with style information and other things.</p>
+                <p>An attribute should always have the following:</p>
+                <ul class="list-style-number">
+                    <li>A space between it and the element name (or the previous attribute, if the element already has
+                        one
+                        or more attributes).</li>
+                    <li>The attribute name followed by an equal sign.</li>
+                    <li>The attribute value wrapped by opening and closing quotation marks.</li>
+                </ul>
+            </section>
+
+            <section class="main-section" id="nesting_elements">
+                <header>Nesting Elements</header>
+                <p>You can put elements inside other elements too — this is called <b>nesting</b>. If we wanted to state
+                    that our
+                    cat is <b>very</b> grumpy, we could wrap the word "very" in a <a
                         href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"><code>&lt;strong&gt;</code></a>
-                    create emphasis.</li>
-            </ul>
-            <p>Consider the following example:</p>
-            <pre><code class="code html">&lt;em&gt;first&lt;/em&gt;&lt;em&gt;second&lt;/em&gt;&lt;em&gt;third&lt;/em&gt;
+                    element, which means that the word is to
+                    be strongly emphasized:</p>
+                <code class="code">&lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;</code>
+                <p>You do however need to make sure that your elements are properly nested. In the example above, we
+                    opened
+                    the <a><code>&lt;p&gt;</code></a> element first, then the <a><code>&lt;strong&gt;</code></a>
+                    element;
+                    therefore, we have to close the
+                    <code>&lt;strong&gt;</code> element first, then the <code>&lt;p&gt;</code> element. The following is
+                    incorrect:
+                </p>
+                <code
+                    class="wrong-code">&lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt; <i class="material-icons">&#xe001;</i></code>
+                <p>The <b>tag have to open and close correctly so that they are clearly inside or outside one
+                        another</b>.
+                    With the kind of overlap in the example above, the browser has to guess at your intent. This kind of
+                    guessing can result in unexpected results.</p>
+            </section>
+
+            <section class="main-section" id="block_versus_inline_elements">
+
+                <header>Block versus inline elements</header>
+                <p>There are two important categories of elements to know in HTML: block-level elements and inline
+                    elements.
+                </p>
+                <ul class="list-style-circle">
+                    <li>Block-level elements form a visible block on a page. A block-level element appears on a new line
+                        following the content that precedes it. Any content that follows a block-level element also
+                        appears
+                        on a new line. Block-level elements are usually structural elements on the page. For example, a
+                        block-level element might represent headings, paragraphs, lists, navigation menus, or footers. A
+                        block-level element wouldn't be nested inside an inline element, but it might be nested inside
+                        another block-level element.</li>
+                    <li>Inline elements are contained within block-level elements, and surround only small parts of the
+                        document's content (not entire paragraphs or groupings of content). An inline element will not
+                        cause
+                        a new line to appear in the document. It is typically used with text, for example an <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a>
+                        element
+                        creates a hyperlink, and elements such as <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"><code>&lt;em&gt;</code></a>>
+                        or <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"><code>&lt;strong&gt;</code></a>
+                        create emphasis.</li>
+                </ul>
+                <p>Consider the following example:</p>
+                <code class="code">&lt;em&gt;first&lt;/em&gt;&lt;em&gt;second&lt;/em&gt;&lt;em&gt;third&lt;/em&gt;
 
 
                 &lt;p&gt;fourth&lt;/p&gt;
                 &lt;p&gt;fifth&lt;/p&gt;
                 &lt;p&gt;sixth&lt;/p&gt;
             </code>
-            <p><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em">&lt;em&gt;</a></code>is an
-                inline element. As you see below, the first three elements sit on the same line, with no space in
-                between. On the other hand,
-                <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p">&lt;p&gt;</a></code> is a
-                block-level element. Each <code><em>p</em></code> element appears on a new line, with space above and
-                below. (The spacing
-                is due to default CSS styling that the browser applies to paragraphs.)
-            </p>
-            <header>Void Elements</header>
-            <p></p>
-            <p>Some elements have no content and are called <a
-                    href="https://developer.mozilla.org/en-US/docs/Glossary/Void_element">void elements</a>. Take the
-                <code>&lt;img&gt;</code> element that we already have in our HTML page:
-            </p>
-        </section>
-        <section class="main-section" id="">
-            <header></header>
-        </section>
-        <section class="main-section" id="">
-            <header></header>
-        </section>
-        <section class="main-section" id="">
-            <header></header>
-        </section>
+                <p><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em">&lt;em&gt;</a></code>is
+                    an
+                    inline element. As you see below, the first three elements sit on the same line, with no space in
+                    between. On the other hand,
+                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p">&lt;p&gt;</a></code> is
+                    a
+                    block-level element. Each <code><em>p</em></code> element appears on a new line, with space above
+                    and
+                    below. (The spacing
+                    is due to default CSS styling that the browser applies to paragraphs.)
+                </p>
+            </section>
+
+            <section class="main-section" id="void_elements">
+                <header>Void Elements</header>
+                <p>Some elements have no content and are called <a
+                        href="https://developer.mozilla.org/en-US/docs/Glossary/Void_element">void elements</a>. Take
+                    the
+                    <code>&lt;img&gt;</code> element that we already have in our HTML page:
+                </p>
+                <code class="code">&lt;img src="image/firefox-icon.png" alt="My test image" /&gt; 
+                </code>
+                <p>This contains two attributes, but there is no closing <code>&lt;/img&gt;</code> tag and no inner
+                    content. This is because an image element doesn't wrap content to affect it. Its purpose is to embed
+                    an image in the HTML page in the place it appears.
+                </p>
+            </section>
+
+            <section class="main-section" id="anatomy_of_an_html_document">
+                <header>Anatomy Of An HTML Document</header>
+                <p>That wraps up the basics of individual HTML elements, but they aren't handy on their own. Now we'll
+                    look at how individual elements are combined to form an entire HTML page. Let's revisit the code we
+                    put into our <code>index.html</code> example (which we first met in the <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing
+                        with files</a> article):</p>
+                <code class="code">&lt;!DOCTYPE html&gt;
+                    &lt;html lang="en-US"&gt;
+                    &emsp;&emsp;&lt;head&gt;
+                    &emsp;&emsp;&emsp;&emsp;&lt;meta charset="uft-8" /&gt;
+                    &emsp;&emsp;&emsp;&emsp;&lt;meta name="viewport" content="width=device-width" /&gt;
+                    &emsp;&emsp;&emsp;&emsp;&lt;title&gt;My test page&lt;/title&gt;
+                    &emsp;&emsp;&lt;/head&gt;
+                    &emsp;&emsp;&lt;body&gt;
+                    &emsp;&emsp;&emsp;&emsp;&lt;img src="image/firefox-icon.png" alt="My test image" /&gt;
+                    &emsp;&emsp;&lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+                <p>Here, we have the following:</p>
+                <ul class="list-style-circle">
+                    <li><code>&lt;!DOCTYPE html&gt;</code> - <a
+                            href="https://developer.mozilla.org/en-US/docs/Glossary/Doctype">doctype</a>.It is a
+                        required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were
+                        meant to act as links to a set of rules that the HTML page had to follow to be considered good
+                        HTML, which could mean automatic error checking and other useful things. However, these days,
+                        they don't do much and are basically just needed to make sure your document behaves correctly.
+                        That's all you need to know for now.</li>
+                    <li><code>&lt;html&gt;&lt;/html&gt;</code> - the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html"><code>&lt;html&gt;</code></a>
+                        element. This element wraps all the content on the entire page and is sometimes known as the
+                        root element. It also includes the lang attribute, setting the primary language of the
+                        document.</code></li>
+                    <li><code>&lt;head&gt;&lt;/head&gt;</code> - the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head"><code>&lt;head&gt;</code></a> element. This element acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers. This includes things like <a href="https://developer.mozilla.org/en-US/docs/Glossary/Keyword">keywords</a> and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more.</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>
+
+            <section class="main-section" id="">
+                <header></header>
+            </section>
+
+            <section class="main-section" id="">
+                <header></header>
+            </section>
     </main>
     <!-- End Contents -->
 </body>
