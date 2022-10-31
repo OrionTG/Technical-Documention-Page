@@ -26,7 +26,8 @@ p {
 
 ul > li {
     padding-top:0.3125rem;
-    padding-left:1rem;
+    padding-left:0.5rem;
+    padding-bottom: 1rem;
 }
 
 ul.list-style-circle {
