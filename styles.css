@@ -1,11 +1,22 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-html {
-    font-size:18px;
-    color:#001b13;
-    font-family: 'Montserrat',Arial, Helvetica, sans-serif;
+* {
+    font-size: 18px;
+    color: #001b13;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     line-height: 150%;
+}
+
+@media only screen and (max-width: 720px) {
+    * {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 721px) {
+    img {
+        transform: scale(0.75);
+    }
 }
 
 body {
@@ -15,18 +26,21 @@ body {
 
 header {
     font-size: 2rem;
-    font-weight:bold;
-    padding-top:3rem;
+    font-weight: bold;
+    padding-top: 3rem;
     display: block;
-}
-p {
-    display: block;
-    padding-top:1rem;
+    text-decoration: underline;
 }
 
-ul > li {
-    padding-top:0.3125rem;
-    padding-left:0.5rem;
+p {
+    display: block;
+    padding-top: 1rem;
+    text-indent: 1rem;
+}
+
+ul>li {
+    padding-top: 0.3125rem;
+    text-indent: 1rem;
     padding-bottom: 1rem;
 }
 
@@ -38,46 +52,47 @@ ul.list-style-number {
     list-style-type: number;
 }
 
-.code, .wrong-code {
-    display:block;
-    padding:0.5rem;
+.code,
+.wrong-code {
+    display: block;
+    padding: 0.5rem;
     border-radius: 0.3125rem;
     white-space: pre-line;
-    padding-left:1rem;
-    
+    padding-left: 1rem;
+
 
 }
 
 .code {
-    border:0.0625rem solid #f2f1f1;
+    border: 0.0625rem solid #f2f1f1;
     background-color: #f2f1f1;
 }
 
 .wrong-code {
-    border:0.0625rem solid #ffe4ec;
+    border: 0.0625rem solid #ffe4ec;
     background-color: #ffe4ec;
 }
 
 code {
-    background-color:#f2f1f1;
+    background-color: #f2f1f1;
     font-size: 1rem;
     font-family: monospace, monospace;
     border-radius: 0.3125rem;
-    display:inline;
-    padding:0.2rem;
+    display: inline;
+    padding: 0.2rem;
 }
 
 .material-icons {
-    color:red;
+    color: red;
     display: inline;
     position: absolute;
-    right:3em;
+    right: 3em;
 }
 
 img {
-    max-width: 100%;
-    border-radius: 5px;
+    width: 90%;
+    border-radius: 0.3125rem;
     display: block;
-    
+    margin-left: auto;
+    margin-right: auto;
 }
-
