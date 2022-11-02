@@ -14,7 +14,25 @@
 
 <body>
     <!-- Nav bar -->
-    <nav id="navbar"></nav>
+    <nav id="navbar">
+    <header>HTML Documentation</header>
+    <ul>
+        <li><a class="nav-link" href="#introduction_to_html">Introduction to HTML</a></li>
+        <li>
+            <a class="nav-link" href="#what_is_html?">What is HTML?</a>
+        </li>
+        <li>
+            <a class="nav-link" href="#anatomy_of_an_html_element">Anatomy of an HTML element</a>
+        </li>
+        <li><a class="nav-link" href="#nesting_elements">Nesting Elements</a></li>
+        <li><a class="nav-link" href="#block_versus_inline_elements">Block versus inline elements</a></li>
+        <li>
+            <a class="nav-link" href="#void_elements">Void Elements</a>
+        </li>
+        <li><a class="nav-link" href="#anatomy_of_an_html_document">Anatomy Of An HTML Document</a></li>
+        <li><a class="nav-link" href="#reference">Reference</a></li>
+    </ul>
+    </nav>
     <!-- End nav bar -->
 
     <!-- Contents -->
@@ -31,7 +49,7 @@
                 HTML.</p>
         </section>
 
-        <section class="main-section" id="what_is_html">
+        <section class="main-section" id="what_is_html?">
             <header>What is HTML?</header>
             <p>HTML (HyperText Markup Language) is a markup language that tells web browsers how to structure the web
                 pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML
@@ -230,19 +248,25 @@
                         attributes sets the character set for your document to UTF-8, which includes most characters
                         from the vast majority of human written languages. With this setting, the page can now handle
                         any textual content it might contain. There is no reason not to set this, and it can help avoid
-                        some problems later.</li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                        some problems later.
+                    </li>
+                    <li><code>&lt;title&gt;&lt;/title&gt;</code>: The
+                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title">&lt;title&gt;</a></code>
+                        element. This sets the title of the page, which is the title that appears in the browser tab the
+                        page is loaded in. The page title is also used to describe the page when it is bookmarked.
+                    </li>
+                    <li><code>&lt;bofy&gt;&lt;/body&gt;</code>: The
+                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">&lt;body&gt;</a></code>
+                        element. This contains <em>all</em> the content that displays on the page, including text,
+                        images, videos, games, playable audio tracks, or whatever else.
+                    </li>
                 </ul>
             </section>
 
-            <section class="main-section" id="">
-                <header></header>
-            </section>
-
-            <section class="main-section" id="">
-                <header></header>
+            <section class="main-section" id="reference">
+                <header>Reference</header>
+                <p>All the documentation in this page is taken from <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN</a></p>
             </section>
     </main>
     <!-- End Contents -->
